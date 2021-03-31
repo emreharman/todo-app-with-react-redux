@@ -1,0 +1,117 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  color: #5eaaa8;
+}
+.todo-input input {
+  width: 50%;
+  height: 15px;
+  padding: 5px;
+  border: 1px solid #5eaaa8;
+}
+.todo-input input:focus {
+  outline: none;
+  box-shadow: 0.5px 0.5px 1px rgb(207, 207, 207);
+}
+.todo-input button {
+  padding: 6px;
+  border: none;
+  background-color: #5eaaa8;
+  color: #f8f1f1;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.todo-input button:hover {
+  background-color: #eb5e0b;
+  box-shadow: 0.5px 0.5px 1px rgb(207, 207, 207);
+}
+.todo-input button:focus {
+  outline: none;
+}
+.todos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.todo-item {
+  width: 50%;
+  margin-top: 20px;
+  background-color: #a3d2ca;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px #a3d2cabe;
+}
+.todo-item-context {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.todo-item-context h2,
+p {
+  text-align: left;
+  padding-left: 30px;
+  color: #f8f1f1;
+}
+.todo-item-buttons {
+  width: 20%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.todo-item-buttons button {
+  border: none;
+  font-size: 0.7rem;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: #5eaaa8;
+  color: #f8f1f1;
+  width: 50px;
+  cursor: pointer;
+}
+#delete-button {
+  background-color: #eb5e0b;
+}
+.todo-item-buttons button:focus {
+  outline: none;
+}
+.todo-item-buttons button:hover {
+  box-shadow: 1px 1px 1px rgb(109, 109, 109);
+}
+
+.done-item {
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+@media screen and (max-width: 650px) {
+  .todo-item {
+    flex-direction: column;
+    width: 90%;
+  }
+  .todo-item-context {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .todo-item-context h2,
+  p {
+    margin-top: 5px;
+  }
+  .todo-item-buttons {
+    align-self: flex-end;
+    width: 50%;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+  .todo-item-buttons button {
+    width: auto;
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+  .todo-input input {
+    width: 80%;
+  }
+}
